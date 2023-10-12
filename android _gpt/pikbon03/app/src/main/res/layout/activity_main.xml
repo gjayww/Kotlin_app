@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/idTILQuery"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-67dp"
+        android:padding="5dp"
+        tools:ignore="NotSibling">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- text view for displaying question-->
+
+            <!-- text view for displaying response-->
+            <TextView
+                android:id="@+id/idTVQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:padding="4dp"
+                android:text="Question"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txtResponse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:padding="4dp"
+                android:text="Response"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/idTVOutput"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="顯 示 區"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/idIVMic"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                tools:srcCompat="@android:drawable/presence_audio_busy" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:hint="Enter the text"
+                android:inputType="text"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/texttoSpeechBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="104dp"
+                android:text="轉                  換"
+                app:layout_constraintTop_toBottomOf="@+id/edit"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-16dp" />
+
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Button" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <!-- text field for asking question-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idTILQuery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter your query"
+            android:padding="5dp"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etQuestion"
+                android:layout_width="388dp"
+                android:layout_height="match_parent"
+                android:drawableTint="@color/white"
+                android:ems="10"
+                android:imeOptions="actionSend"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TextView (Hidden) -->
+
+        <!-- ImageButton -->
+
+    </LinearLayout>
+</RelativeLayout>

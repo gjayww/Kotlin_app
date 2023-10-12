@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="etQuestion" type="id" />
+    <item name="idTILQuery" type="id" />
+    <item name="txtResponse" type="id" />
+    <item name="idTVQuestion" type="id" />
+</resources>
